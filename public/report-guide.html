@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Guide</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 760px;
+      margin: 2rem auto;
+      line-height: 1.65;
+      padding: 0 1rem;
+    }
+    h1 {
+      margin-bottom: 0.4rem;
+    }
+    code {
+      background: #f1f5f9;
+      padding: 0.15rem 0.3rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CrisisBrain Report Submission Guide</h1>
+  <p>This page is served through file streaming from the backend route <code>/report-guide</code>.</p>
+  <p>Use this to demonstrate syllabus topic: static page delivery using file streams.</p>
+  <h2>Required Fields</h2>
+  <ul>
+    <li>zone</li>
+    <li>severity</li>
+    <li>issueType</li>
+    <li>population</li>
+  </ul>
+  <h2>Demo API</h2>
+  <p>Submit with <code>POST /api/reports</code> and then inspect data with <code>GET /api/disasters</code>.</p>
+</body>
+</html>

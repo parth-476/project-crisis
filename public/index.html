@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrisisBrain - Evaluation Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="tag">Backend Evaluation Project</p>
+      <h1>CrisisBrain</h1>
+      <p class="subtitle">Early Warning and Response Prediction System</p>
+      <p class="description">A full-stack disaster management platform with Node.js backend, Express routing, file-based data storage, and modern frontend. Built to demonstrate practical backend concepts through real-world crisis response scenarios.</p>
+      <a class="guide-link" href="/report-guide" target="_blank" rel="noreferrer">
+        View Documentation
+      </a>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="card">
+      <h2>Submit Public Report</h2>
+      <form id="reportForm">
+        <label>
+          Zone Name
+          <input name="zone" placeholder="e.g., Coastal-East" required>
+        </label>
+        <label>
+          Severity Level
+          <select name="severity" required>
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+            <option value="critical">Critical</option>
+          </select>
+        </label>
+        <label>
+          Issue Type
+          <input name="issueType" placeholder="e.g., flood, earthquake" required>
+        </label>
+        <label>
+          Affected Population
+          <input name="population" type="number" min="1" placeholder="Enter number" required>
+        </label>
+        <label>
+          Additional Notes
+          <textarea name="notes" rows="3" placeholder="Brief description of the situation..."></textarea>
+        </label>
+        <button type="submit">Submit Report</button>
+      </form>
+      <p id="reportStatus" class="status"></p>
+    </section>
+
+    <section class="card">
+      <h2>Predicted Risk Zones</h2>
+      <div class="inline-actions">
+        <button id="loadRiskBtn">Load Prediction</button>
+        <button id="alertBtn">Generate Alert</button>
+      </div>
+      <ul id="riskList" class="list"></ul>
+      <pre id="alertOutput" class="output"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Auto Resource Suggestion</h2>
+      <button id="resourceBtn">Get Resource Plan</button>
+      <pre id="resourceOutput" class="output"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Emergency Simulation Mode</h2>
+      <div class="inline-actions">
+        <button id="simulateFlood">Run Flood Drill</button>
+        <button id="simulateHeat">Run Heatwave Drill</button>
+      </div>
+      <pre id="simulationOutput" class="output"></pre>
+    </section>
+
+    <section class="card full">
+      <h2>All Disaster Reports</h2>
+      <button id="refreshReports">Refresh Report List</button>
+      <div id="reportTableWrap"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "reports": [
+    {
+      "id": 1001,
+      "zone": "Coastal-West",
+      "severity": "high",
+      "issueType": "flood",
+      "population": 38000,
+      "notes": "River level increased in last 6 hours",
+      "createdAt": "2026-03-05T09:20:00.000Z"
+    },
+    {
+      "id": 1002,
+      "zone": "Urban-Central",
+      "severity": "medium",
+      "issueType": "heatwave",
+      "population": 62000,
+      "notes": "Rising temperature and power load",
+      "createdAt": "2026-03-06T12:10:00.000Z"
+    },
+    {
+      "id": 1003,
+      "zone": "Hill-North",
+      "severity": "critical",
+      "issueType": "landslide",
+      "population": 15000,
+      "notes": "Heavy rainfall near slope region",
+      "createdAt": "2026-03-06T18:45:00.000Z"
+    },
+    {
+      "id": 1772894323270,
+      "zone": "coastal-east",
+      "severity": "medium",
+      "issueType": "flood",
+      "population": 123,
+      "notes": "",
+      "createdAt": "2026-03-07T14:38:43.270Z"
+    }
+  ]
+}
